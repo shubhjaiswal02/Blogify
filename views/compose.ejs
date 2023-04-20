@@ -1,18 +1,21 @@
 <%- include('./partials/header'); -%>
 
-  <label for="input-box">
-    <h1>Compose</h1>
-  </label><br>
+
+  <h1>Compose</h1>
+
   <form action="/compose" method="post">
-    <label for="input-box">
-      Title
-    </label><br>
-    <textarea id="input-box" name="input-box" rows="1" style="width: 100%; resize: none;"></textarea>
-    <label for="input-box">
-      Post
-    </label><br>
-    <textarea id="input-box" name="input-box" rows="5" style="width: 100%; "></textarea>
-    <input class="btn btn-primary" type="submit" value="Publish" onclick="logInput()">
+    <div class="form-group">
+      <label>
+        Title
+      </label>
+      <input class="form-control" name="postTitle" type="text"></input>
+
+      <label>
+        Post
+      </label>
+      <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" name="button">Publish</button>
   </form>
 
 
